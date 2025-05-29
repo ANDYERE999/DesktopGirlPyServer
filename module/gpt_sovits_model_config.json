@@ -1,0 +1,79 @@
+{
+    "Fairy": {
+        "weight-path": "D:\\1AAAFiles\\666_files\\AI\\txt2voice\\voiceBank\\Fairy\\Fairy-e10.ckpt",
+        "sovits-path": "D:\\1AAAFiles\\666_files\\AI\\txt2voice\\voiceBank\\Fairy\\Fairy_e10_s870.pth",
+        "ref-audio-path": "D:\\1AAAFiles\\666_files\\AI\\txt2voice\\voiceBank\\Fairy\\了解我会如同主人使唤我一般使唤它，并且让它不敢有怨言。.wav",
+        "aux-ref-audio": "None",
+        "prompt-text": "了解我会如同主人使唤我一般使唤它，并且让它不敢有怨言。"
+    },
+    "丁真": {
+        "weight-path": "D:\\1AAAFiles\\666_files\\AI\\txt2voice\\voiceBank\\丁真\\丁真GPT.ckpt",
+        "sovits-path": "D:\\1AAAFiles\\666_files\\AI\\txt2voice\\voiceBank\\丁真\\丁真SoVITS.pth",
+        "ref-audio-path": "D:\\1AAAFiles\\666_files\\AI\\txt2voice\\voiceBank\\丁真\\希望大家都可以行动起来，我从理塘来，大家，一首微笑的歌，希望大家能够喜欢，扎西德勒。.wav",
+        "aux-ref-audio": "None",
+        "prompt-text": "希望大家都可以行动起来，我从理塘来，大家，一首微笑的歌，希望大家能够喜欢，扎西德勒。"
+    },
+    "东雪莲": {
+        "weight-path": "D:\\1AAAFiles\\666_files\\AI\\txt2voice\\voiceBank\\东雪莲\\东雪莲GPT.ckpt",
+        "sovits-path": "D:\\1AAAFiles\\666_files\\AI\\txt2voice\\voiceBank\\东雪莲\\东雪莲SoVITS.pth",
+        "ref-audio-path": "D:\\1AAAFiles\\666_files\\AI\\txt2voice\\voiceBank\\东雪莲\\抽烟喝酒打架，你怎么知道他打的是男人女人.wav",
+        "aux-ref-audio": "None",
+        "prompt-text": "抽烟喝酒打架，你怎么知道他打的是男人女人"
+    },
+    "可琳": {
+        "weight-path": "D:\\1AAAFiles\\666_files\\AI\\txt2voice\\voiceBank\\可琳\\可琳-e10.ckpt",
+        "sovits-path": "D:\\1AAAFiles\\666_files\\AI\\txt2voice\\voiceBank\\可琳\\可琳_e10_s220.pth",
+        "ref-audio-path": "D:\\1AAAFiles\\666_files\\AI\\txt2voice\\voiceBank\\可琳\\我可以帮忙，只要能带我离开这个空洞，就好拜拜托你了。.wav",
+        "aux-ref-audio": "None",
+        "prompt-text": "我可以帮忙，只要能带我离开这个空洞，就好拜拜托你了。"
+    },
+    "可莉": {
+        "weight-path": "D:\\1AAAFiles\\666_files\\AI\\txt2voice\\voiceBank\\可莉\\可莉-e10.ckpt",
+        "sovits-path": "D:\\1AAAFiles\\666_files\\AI\\txt2voice\\voiceBank\\可莉\\可莉_e10_s210.pth",
+        "ref-audio-path": "D:\\1AAAFiles\\666_files\\AI\\txt2voice\\voiceBank\\可莉\\买东西那天也有一个人帮了开了款式，那个人好像叫.wav",
+        "aux-ref-audio": "None",
+        "prompt-text": "买东西那天也有一个人帮了开了款式，那个人好像叫"
+    },
+    "孙笑川": {
+        "weight-path": "D:\\1AAAFiles\\666_files\\AI\\txt2voice\\voiceBank\\孙笑川\\孙笑川GPT.ckpt",
+        "sovits-path": "D:\\1AAAFiles\\666_files\\AI\\txt2voice\\voiceBank\\孙笑川\\孙笑川SoVITS.pth",
+        "ref-audio-path": "D:\\1AAAFiles\\666_files\\AI\\txt2voice\\voiceBank\\孙笑川\\你们听啊这是一个高一的学生啊，他是这么说的，孙桑，你好作为你，作为你的粉丝我现在很苦恼。.wav",
+        "aux-ref-audio": "None",
+        "prompt-text": "你们听啊这是一个高一的学生啊，他是这么说的，孙桑，你好作为你，作为你的粉丝我现在很苦恼。"
+    },
+    "派蒙": {
+        "weight-path": "D:\\1AAAFiles\\666_files\\AI\\txt2voice\\voiceBank\\派蒙\\派蒙-e10.ckpt",
+        "sovits-path": "D:\\1AAAFiles\\666_files\\AI\\txt2voice\\voiceBank\\派蒙\\派蒙_e10_s19390.pth",
+        "ref-audio-path": "D:\\1AAAFiles\\666_files\\AI\\txt2voice\\voiceBank\\派蒙\\我在城墙那里等了你好久好久，你一直都不回来，不是约定好只看一眼就回来的吗.mp3",
+        "aux-ref-audio": "None",
+        "prompt-text": "我在城墙那里等了你好久好久，你一直都不回来，不是约定好只看一眼就回来的吗"
+    },
+    "科比": {
+        "weight-path": "D:\\1AAAFiles\\666_files\\AI\\txt2voice\\voiceBank\\科比\\科比GPT.ckpt",
+        "sovits-path": "D:\\1AAAFiles\\666_files\\AI\\txt2voice\\voiceBank\\科比\\科比SoVITS.pth",
+        "ref-audio-path": "D:\\1AAAFiles\\666_files\\AI\\txt2voice\\voiceBank\\科比\\Uh, you know, it&#39;s amazing, like, when you become a parent, um, things become much more, you know, life becomes....wav",
+        "aux-ref-audio": "None",
+        "prompt-text": "Uh, you know, it&#39;s amazing, like, when you become a parent, um, things become much more, you know, life becomes..."
+    },
+    "纳西妲": {
+        "weight-path": "D:\\1AAAFiles\\666_files\\AI\\txt2voice\\voiceBank\\纳西妲\\纳西妲-e10.ckpt",
+        "sovits-path": "D:\\1AAAFiles\\666_files\\AI\\txt2voice\\voiceBank\\纳西妲\\纳西妲_e10_s400.pth",
+        "ref-audio-path": "D:\\1AAAFiles\\666_files\\AI\\txt2voice\\voiceBank\\纳西妲\\（如果是说踏鞴砂那个神秘事件与倾奇者之类的…我知道哦。）.wav",
+        "aux-ref-audio": "None",
+        "prompt-text": "（如果是说踏鞴砂那个神秘事件与倾奇者之类的…我知道哦。）"
+    },
+    "蔡徐坤": {
+        "weight-path": "D:\\1AAAFiles\\666_files\\AI\\txt2voice\\voiceBank\\蔡徐坤\\蔡徐坤GPT.ckpt",
+        "sovits-path": "D:\\1AAAFiles\\666_files\\AI\\txt2voice\\voiceBank\\蔡徐坤\\蔡徐坤SoVITS.pth",
+        "ref-audio-path": "D:\\1AAAFiles\\666_files\\AI\\txt2voice\\voiceBank\\蔡徐坤\\全民制作人们大家好，我是练习时长两年半的个人练习生蔡徐坤。.wav",
+        "aux-ref-audio": "None",
+        "prompt-text": "全民制作人们大家好，我是练习时长两年半的个人练习生蔡徐坤。"
+    },
+    "铃": {
+        "weight-path": "D:\\1AAAFiles\\666_files\\AI\\txt2voice\\voiceBank\\铃\\铃-e10.ckpt",
+        "sovits-path": "D:\\1AAAFiles\\666_files\\AI\\txt2voice\\voiceBank\\铃\\铃_e10_s3810.pth",
+        "ref-audio-path": "D:\\1AAAFiles\\666_files\\AI\\txt2voice\\voiceBank\\铃\\不过哥哥，现在我有另一件事想和你谈谈，是关于朱渊和青衣，他们两个人的。.wav",
+        "aux-ref-audio": "None",
+        "prompt-text": "不过哥哥，现在我有另一件事想和你谈谈，是关于朱渊和青衣，他们两个人的。"
+    }
+}
