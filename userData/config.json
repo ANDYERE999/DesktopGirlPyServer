@@ -1,0 +1,14 @@
+{
+"Live2D_model_name":"",
+"is_Live2D_model_include_gpt_sovits_model":false,
+"is_Live2D_model_include_personality_prompt":false,
+"LLM_model_type":0,
+"integrated_or_custom":0,
+"integrated_model_name":0,
+"custom_model_local_host":"",
+"remote_model_provider":0,
+"remote_model_name":"",
+"remote_model_api_key":"",
+"is_model_support_multimodal":false,
+"enable_gpt_sovits":false
+}

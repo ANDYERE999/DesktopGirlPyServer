@@ -8,7 +8,7 @@ import time
 from datetime import datetime
 import requests
 import socket
-
+import json
 def get_system_info():
     """获取系统配置信息"""
     try:
@@ -273,14 +273,86 @@ def update_performance_and_recommendations():
     
     return system_display, cpu_display, memory_display, gpu_display, server_display, recommendations_display
 
+class Config:
+    def __init__(self):
+        self.Live2D_model_name = ""
+        self.is_Live2D_model_include_gpt_sovits_model = False
+        self.is_Live2D_model_include_personality_prompt = False
+        self.LLM_model_type = 0 # 0:本地模型 1:远程模型
+        self.integrated_or_custom = 0 # 0:内置模型 1:自定义模型
+        self.integrated_model_name = 0 # 0:Qwen2.5-VL-7B-Instruct-Q3_K_S-GGUF(支持多模态) 1:DeepSeek-R1-0528-Qwen3-8B-GGUF
+        self.custom_model_local_host = ""
+        self.remote_model_provider = 0 # 0:Gemini 1:Claude 2:GPT-4 3:Deepseek 4:Qwen
+        self.remote_model_name = ""
+        self.remote_model_api_key = ""
+        self.is_model_support_multimodal = False
+        self.enable_gpt_sovits = False
+
+        self.can_gpt_sovits_enable = False
+        self.can_multimodal_enable = False
+
+    def check_can_gpt_sovits_enable(self):
+        if self.LLM_model_type == 0:
+            self.can_gpt_sovits_enable = True
+        else:
+            self.can_gpt_sovits_enable = False
+    
+    def check_can_multimodal_enable(self):
+        if self.is_model_support_multimodal:
+            self.can_multimodal_enable = True
+        else:
+            self.can_multimodal_enable = False
+
+    def read_config_from_file(self, string):
+        with open(string, "r") as f:
+            config = json.load(f)
+        return config
+    
+    def write_config_to_file(self, string):
+        with open(string, "w") as f:
+            json.dump(self, f)
+
+class gpt_sovits_handler:
+    def __init__(self):
+        self.enable = False
+    
+    
+        
 with gr.Blocks() as mainUI:
     gr.Markdown("DesktopGirl服务端")
     with gr.Tabs():
         with gr.Tab("Live2D模型配置"):
-            pass
+            with gr.Row("已经安装的模型"):
+                installed_models = gr.Markdown("正在加载已经安装的模型...")
+            with gr.Row("安装新模型"):
+                install_model = gr.Button("安装新模型")
         with gr.Tab("LLM模型配置"):
-            pass
+            local_or_remote = gr.Radio(["本地模型", "远程模型"], value="本地模型", interactive=True)
+            with gr.Row():
+                with gr.Column():
+                    gr.Markdown("本地模型配置")
+                    integrated_or_custom = gr.Radio(label="本地模型选择", choices=["内置模型", "自定义模型(仅限Ollama)"], value="内置模型", interactive=True)
+                    with gr.Row():
+                        with gr.Column():
+                            integrated_model_select = gr.Dropdown(label="选择内置模型", choices=["Qwen2.5-VL-7B-Instruct-Q3_K_S-GGUF(支持多模态)","DeepSeek-R1-0528-Qwen3-8B-GGUF"], value="Qwen2.5-VL-7B-Instruct-Q3_K_S-GGUF(支持多模态)", interactive=True)
+                        with gr.Column():
+                            custom_model_local_host = gr.Textbox(label="Ollama端口", value="http://127.0.0.1:11434/", interactive=True)
+                            gr.Checkbox(label="该模型是否支持多模态", value=False, interactive=True)
+
+                with gr.Column():
+                    gr.Markdown("远程模型配置")
+                    remote_model_provider = gr.Dropdown(label="选择远程模型提供商", choices=["Gemini","Claude","GPT-4","Deepseek","Qwen"], value="Gemini", interactive=True)
+                    remote_model_select = gr.Textbox(label="输入远程模型名称", value="Gemini-2.0-flash", interactive=True)
+                    remote_model_api_key = gr.Textbox(label="输入远程模型API密钥", value="", interactive=True)
+                    gr.Checkbox(label="该模型是否支持多模态", value=False, interactive=True)
+            with gr.Row():
+                gr.Textbox(label="最终的模型配置", value="", interactive=False)
+                gr.Button("确认")
+            gr.Button("请帮助我配置模型", variant="primary")
         with gr.Tab("GPT-Sovits模型配置"):
+            gr.Checkbox(label="是否开启GPT-Sovits", value=False, interactive=True)
+
+        with gr.Tab("人物制作器"):
             pass
         with gr.Tab("性能监测器"):
             gr.Markdown("### 电脑配置与服务端性能监测")
@@ -318,6 +390,10 @@ with gr.Blocks() as mainUI:
         
         with gr.Tab("客户端独立打包"):
             pass
+        with gr.Tab("关于"):
+            pass
 
 if __name__ == "__main__":
+    os.environ["HTTP_PROXY"] = "http://127.0.0.1:7890"
+    os.environ["HTTPS_PROXY"] = "http://127.0.0.1:7890"
     mainUI.launch()
